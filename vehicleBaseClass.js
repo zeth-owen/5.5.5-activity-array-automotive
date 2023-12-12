@@ -11,12 +11,22 @@ class Vehicle {
         this.numberOfWheels = 0;
     }
 
+    performService() {
+        if (this.mileage > 30000) {
+            this.scheduleService = true;
+            console.log('Time for maintenance :/');
+        } else {
+            this.scheduleService = false;
+            console.log('Drive on! :)');
+        }
+    }
+
     start() {
         if (this.fuel > 0) {
-            return this.started = true;
+            this.started = true;
             console.log("engine started...!!!");
         } else {
-            return this.started = false;
+            this.started = false;
             console.log("engine cannot start...");
         }
     }
